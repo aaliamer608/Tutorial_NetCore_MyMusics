@@ -1,0 +1,15 @@
+C:\Users\Bus-Boi\Desktop\ITLize Orientation\NetCore\MyMusic_Exercise1\MyMusic01\MyMusic.Core\bin\Debug\net5.0\MyMusic.Core.deps.json
+C:\Users\Bus-Boi\Desktop\ITLize Orientation\NetCore\MyMusic_Exercise1\MyMusic01\MyMusic.Core\bin\Debug\net5.0\MyMusic.Core.runtimeconfig.json
+C:\Users\Bus-Boi\Desktop\ITLize Orientation\NetCore\MyMusic_Exercise1\MyMusic01\MyMusic.Core\bin\Debug\net5.0\MyMusic.Core.runtimeconfig.dev.json
+C:\Users\Bus-Boi\Desktop\ITLize Orientation\NetCore\MyMusic_Exercise1\MyMusic01\MyMusic.Core\bin\Debug\net5.0\MyMusic.Core.dll
+C:\Users\Bus-Boi\Desktop\ITLize Orientation\NetCore\MyMusic_Exercise1\MyMusic01\MyMusic.Core\bin\Debug\net5.0\ref\MyMusic.Core.dll
+C:\Users\Bus-Boi\Desktop\ITLize Orientation\NetCore\MyMusic_Exercise1\MyMusic01\MyMusic.Core\bin\Debug\net5.0\MyMusic.Core.pdb
+C:\Users\Bus-Boi\Desktop\ITLize Orientation\NetCore\MyMusic_Exercise1\MyMusic01\MyMusic.Core\obj\Debug\net5.0\MyMusic.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Bus-Boi\Desktop\ITLize Orientation\NetCore\MyMusic_Exercise1\MyMusic01\MyMusic.Core\obj\Debug\net5.0\MyMusic.Core.AssemblyInfoInputs.cache
+C:\Users\Bus-Boi\Desktop\ITLize Orientation\NetCore\MyMusic_Exercise1\MyMusic01\MyMusic.Core\obj\Debug\net5.0\MyMusic.Core.AssemblyInfo.cs
+C:\Users\Bus-Boi\Desktop\ITLize Orientation\NetCore\MyMusic_Exercise1\MyMusic01\MyMusic.Core\obj\Debug\net5.0\MyMusic.Core.csproj.CoreCompileInputs.cache
+C:\Users\Bus-Boi\Desktop\ITLize Orientation\NetCore\MyMusic_Exercise1\MyMusic01\MyMusic.Core\obj\Debug\net5.0\MyMusic.Core.dll
+C:\Users\Bus-Boi\Desktop\ITLize Orientation\NetCore\MyMusic_Exercise1\MyMusic01\MyMusic.Core\obj\Debug\net5.0\ref\MyMusic.Core.dll
+C:\Users\Bus-Boi\Desktop\ITLize Orientation\NetCore\MyMusic_Exercise1\MyMusic01\MyMusic.Core\obj\Debug\net5.0\MyMusic.Core.pdb
+C:\Users\Bus-Boi\Desktop\ITLize Orientation\NetCore\MyMusic_Exercise1\MyMusic01\MyMusic.Core\obj\Debug\net5.0\MyMusic.Core.genruntimeconfig.cache
+C:\Users\Bus-Boi\Desktop\ITLize Orientation\NetCore\MyMusic_Exercise1\MyMusic01\MyMusic.Core\obj\Debug\net5.0\MyMusic.Core.csproj.AssemblyReference.cache

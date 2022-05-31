@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -12,7 +13,10 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
+using MyMusic.Api.Extensions;
+using MyMusic.Api.Settings;
 using MyMusic.Core;
+using MyMusic.Core.Models.Auth;
 using MyMusic.Core.ServiceInterface;
 using MyMusic.Data;
 using MyMusic.Services.ServiceLogics;
@@ -32,12 +36,18 @@ namespace MyMusic.Api
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            var jwtSettings = Configuration.GetSection("Jwt").Get<JwtSettings>();
+
             services.AddControllers();
 
 
             services.AddDbContext<MyMusicDbContext>(options =>
             options.UseSqlServer(Configuration.GetConnectionString("Default"), x
             => x.MigrationsAssembly("MyMusic.Data")));
+            
+            
+            
+            services.AddIdentity<User, Role>().AddEntityFrameworkStores<MyMusicDbContext>().AddDefaultTokenProviders();
 
 
             services.AddScoped<IUnitOfWork, UnitOfWork>();
@@ -45,10 +55,33 @@ namespace MyMusic.Api
             services.AddTransient<IArtistService, ArtistService>();
 
 
-            //services.AddSwaggerGen(c =>
-            //{
-            //    c.SwaggerDoc("v1", new OpenApiInfo { Title = "MyMusic.Api", Version = "v1" });
-            //});
+            services.AddSwaggerGen(c =>
+            {
+                c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
+                {
+                    Description = "JWT containing userid claim",
+                    Name = "Authorization",
+                    In = ParameterLocation.Header,
+                    Type = SecuritySchemeType.ApiKey,
+                });
+                var security =
+                new OpenApiSecurityRequirement
+                {
+{
+new OpenApiSecurityScheme
+{
+Reference = new OpenApiReference
+{
+Id = "Bearer",
+Type = ReferenceType.SecurityScheme
+},
+UnresolvedReference = true
+},
+new List<string>()
+}
+                };
+                c.AddSecurityRequirement(security);
+            });
 
             services.AddSwaggerGen(options =>
             {
@@ -57,11 +90,18 @@ namespace MyMusic.Api
                     Title = "My Music",
                     Version = "v1"
                 });
+
             });
 
 
 
             services.AddAutoMapper(typeof(Startup));
+
+
+            services.Configure<JwtSettings>(Configuration.GetSection("Jwt"));
+
+            services.AddAuth(jwtSettings);
+
         }
 
 
@@ -74,7 +114,7 @@ namespace MyMusic.Api
                 //app.UseSwagger();
                 //app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "MyMusic.Api v1"));
             }
-            else 
+            else
             {
                 //Default HSTS is 30 days https://aka.ms/aspnetcore-hsts 
                 app.UseHsts();
@@ -85,6 +125,8 @@ namespace MyMusic.Api
             app.UseRouting();
 
             //app.UseAuthorization();
+
+            app.UseAuth();
 
             app.UseEndpoints(endpoints =>
             {
@@ -100,3 +142,5 @@ namespace MyMusic.Api
         }
     }
 }
+
+

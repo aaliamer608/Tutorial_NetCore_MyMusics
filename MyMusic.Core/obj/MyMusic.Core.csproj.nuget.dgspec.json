@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Bus-Boi\\Desktop\\ITLize Orientation\\NetCore\\MyMusic_Exercise1\\MyMusic01\\MyMusic.Core\\MyMusic.Core.csproj": {}
+    "C:\\Users\\Bus-Boi\\Desktop\\Moo4\\MyMusic.Core\\MyMusic.Core.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Bus-Boi\\Desktop\\ITLize Orientation\\NetCore\\MyMusic_Exercise1\\MyMusic01\\MyMusic.Core\\MyMusic.Core.csproj": {
+    "C:\\Users\\Bus-Boi\\Desktop\\Moo4\\MyMusic.Core\\MyMusic.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Bus-Boi\\Desktop\\ITLize Orientation\\NetCore\\MyMusic_Exercise1\\MyMusic01\\MyMusic.Core\\MyMusic.Core.csproj",
+        "projectUniqueName": "C:\\Users\\Bus-Boi\\Desktop\\Moo4\\MyMusic.Core\\MyMusic.Core.csproj",
         "projectName": "MyMusic.Core",
-        "projectPath": "C:\\Users\\Bus-Boi\\Desktop\\ITLize Orientation\\NetCore\\MyMusic_Exercise1\\MyMusic01\\MyMusic.Core\\MyMusic.Core.csproj",
+        "projectPath": "C:\\Users\\Bus-Boi\\Desktop\\Moo4\\MyMusic.Core\\MyMusic.Core.csproj",
         "packagesPath": "C:\\Users\\Bus-Boi\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Bus-Boi\\Desktop\\ITLize Orientation\\NetCore\\MyMusic_Exercise1\\MyMusic01\\MyMusic.Core\\obj\\",
+        "outputPath": "C:\\Users\\Bus-Boi\\Desktop\\Moo4\\MyMusic.Core\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -52,6 +52,14 @@
               "target": "Package",
               "version": "[11.0.0, )"
             },
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[5.0.17, )"
+            },
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.17, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[5.0.17, )"
@@ -69,6 +77,14 @@
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
               "version": "[5.0.17, )"
+            },
+            "Microsoft.Extensions.Identity.Stores": {
+              "target": "Package",
+              "version": "[6.0.5, )"
+            },
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[6.18.0, )"
             }
           },
           "imports": [
